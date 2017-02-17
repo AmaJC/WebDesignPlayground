@@ -1,0 +1,128 @@
+<html> 
+<head>
+    <title>WDD | Hands-on 2</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/instructions.css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="container">
+		<a href="../../index.html">
+			<div id="header-back"><img id="header-img" src="assets/img/home.svg">
+			</div>
+		</a>
+		<div id="header">
+			<div id="header-caption">
+				<div id="header-caption-logo"><img class="img-scaled" src="assets/img/logo.png" /></div>
+				<div id="header-caption-name">Web Design DeCal</div>
+				<div class="clear"></div>
+			</div>
+			<div id="header-content">
+				<!-- ASSIGNMENT NAME -->
+				<div id="header-title">Hands-on 3</div>
+				<!-- DUE DATE -->
+				<div id="header-due">September 22</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="info">
+				<!-- ASSIGNMENT TITLE -->
+				<div class="info-title">CSS Box Model</div>
+				<div class="info-content">
+					<!-- REQUIRED TOOLS -->
+					<div class="info-required">Required Tools: Google Chrome and a text editor</div>
+					<!-- INTRODUCTION -->
+					<div class="info-intro">Today, we'll be learning how to place, position, and space HTML elements. We'll explore different CSS styles, such as margin, padding, border, and position. You'll create a photo gallery blog page for Karl the Fog.</div>
+				</div>
+			</div>
+			<div class="body">
+				<div class="body-header">Assignment</div>
+				<!-- CONTENT -->
+				
+				<!-- Styled Tags; P, UL, LI, .caption, A, IMG-->
+				<!-- Add P Tags for each paragraph -->
+				<!-- Use UL LI Tags for each lists -->
+				<!-- Use P Tags with "caption" class for paragraph captions (60% opacity) -->
+				<!-- Use IMG Tags for assets/img -->
+				<p>At the end of this hands-on, you should have something like the page below.</p>
+				<img src="assets/img/finish.png">
+				
+				<div class = "body-header"><br>Step 1: Adjusting the Blog Text</div>
+				<br>
+				<img src="assets/img/starter.png">
+				<p>Open "index.html" from the downloaded folder in your browser to see what we have to work with.</p>
+				<p>Karl the Fog's blog has some issues with spacing and position now - but don't worry! With a bit of CSS, we can easily make it pretty.  From the downloaded folder, open up <b>style.css</b> and <b>index.html</b>!</p>
+				<p>Tip: Try using Web Inspector to edit your CSS, so you can see immediate results of the properties and values you input. Then, copy this code into your style.css file to make those changes permanent!</p>
+				<p>Notice that the blog text is very close to the edge of the container. Let's use <b>padding</b> to create more space between the blog text and blog container.</p>
+
+				.blog_text_container {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding: 20px;
+				<br>}
+
+				<p>Right now our blog title, subtitle and description are all evenly spaced. Let's use <b>padding-bottom</b> to add more space between the title/subtitle and the description!</p>
+
+				.blog_head_container {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding-bottom: 10px;
+				<br>}
+
+				<p>Refresh your page, and you should have something that looks like this:</p>
+				<img src="assets/img/blogtext.png">
+
+				<div class = "body-header"><br>Step 2: Positioning and Spacing the Blog Posts</div>
+				<p>Right now our blog posts are placed edge-to-edge. Let's add some breathing room between each blog post by using <b>margin</b>.</p>
+
+				.blog_container {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 10px;
+				<br>}
+				
+				<p>Now, you should have something like this.</p>
+				<img src="assets/img/cardui.png">
+
+				<div class = "body-header"><br>Step 3: Fixing the Navigation Bar</div>
+				<p>Your website looks pretty nice! (I hope). However, the nav bar's text needs some work on spacing. To fix that, use <b>padding</b> and <b>margin</b> to make the nav bar more legible.</p>
+				
+				<p>To add margin for all nav bar items, apply your CSS styling to <b>#navbar</b>.</p>
+				
+				#navbar {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding: 15px;
+				<br>}
+
+				<p>Now we need to increase space on the left and right between each item on the nav bar list. To do this, we need to use the CSS selector <b>#navbar-items li</b> and apply <b>margin</b> values.</p>
+
+				#navbar-items li {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 0px 10px;
+				<br>}
+
+				<p>Great! Your nav bar should look something like this now.</p>
+				<img src="assets/img/navbar.png">
+
+				<div class = "body-header"><br>Step 4: Final Touches</div>
+				<p>Let's add some spacing around the title of our blog. Both the title "Karl the Fog" and subtitle are contained in #title-container. Let's apply some <b>margin</b> values once again, and use <b>text-align</b> to center the title container.</p>
+
+				#title-container {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 20px 10px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-align: center;
+				<br>}
+				
+				<p>Lastly, let's add a follow button below our blog title. Add a button in the title-container div on your HTML and apply CSS style properties, including <b>padding</b> to enlargen the button size and <b>margin</b> to add spacing around the button!</p>
+
+				<xmp><button id="follow_button">Follow</button></xmp>
+				#follow_button {
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding: 10px 80px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-size: 24px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background-color: #78909C;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; border: none;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color: white;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 20px;
+				<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cursor: pointer;
+				<br>}
+
+				<p>P.S. For HEX color code inspiration (for CSS properties background-color, color, etc.), check out <a href="https://material.google.com/style/color.html#color-color-palette">Google Color</a>!</p>
+
+				<p>Awesome! Your website should now look like the image at the top of the page.</p>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
